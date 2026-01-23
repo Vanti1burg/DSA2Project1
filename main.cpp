@@ -8,11 +8,23 @@
 
 
 using namespace std;
+
+struct node {
+    string name;
+    string pword;
+    string encPword;
+    node* next;
+};
+
 int main() {
 
 
     vector<string> nameList{};
     vector<string> passwordList{};
+    vector<string> encryptedPasswordList{};
+
+    string cipherKey= "passwords";
+
      srand(time(0));
     ifstream nameFile;
 
@@ -58,5 +70,22 @@ int main() {
     cout<<passwordList[0]<<endl;    
     cout<<passwordList.size()<<endl;
 
+
+    for (int i = 0; i < passwordList.size(); i++) {
+
+        string encryptedPassword="";
+
+        for (int j=0; j<passwordList[i].size(); j++) {
+          
+          cout<<"will do later"<<endl;
+
+        }
+        cout<<encryptedPassword<<endl;
+        encryptedPasswordList.push_back(encryptedPassword);
+        
+    }
+    cout<<passwordList[0]<<endl;
+    char cipherChar= ((passwordList[0].at(0)-'a')+ (cipherKey.at(0)-'a')) %26 + 'a';
+    cout<<cipherChar<<endl;
     return 0;
 }
