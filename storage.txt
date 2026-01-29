@@ -1,0 +1,74 @@
+
+    vector<string> nameList{};
+    vector<string> passwordList{};
+    vector<string> encryptedPasswordList{};
+
+    string cipherKey= "passwords";
+
+     srand(time(0));
+    ifstream nameFile;
+    ofstream outFile;
+
+    outFile.open("rawPasswords.txt");
+    if(!outFile) {
+        cerr << "Unable to open file rawPasswords.txt";
+        exit(1);
+    }
+
+    nameFile.open("names.txt");
+    if(!nameFile) {
+        cerr << "Unable to open file names.txt";
+        exit(1);
+    }   
+
+
+    while(!nameFile.eof()) {
+        string name;
+        string nameExtract;
+        string password = "";
+        getline(nameFile, name);
+        istringstream ss(name);
+        ss >> nameExtract;
+        nameList.push_back(nameExtract);
+        for (int i=0; i<8; i++) {
+            char randomChar = 'a' + rand() % 26;
+            password+= randomChar;
+        }
+        passwordList.push_back(password);  
+        outFile << nameExtract << " " << password << endl;  
+    }
+
+    nameFile.close();
+
+
+   for (int i = 0; i < nameList.size(); i++) {
+        cout << nameList[i] <<endl;
+    }
+
+
+    cout<<nameList[0]<<endl;
+    cout<<nameList.size()<<endl;
+
+  
+   
+    cout<<passwordList[0]<<endl;    
+    cout<<passwordList.size()<<endl;
+
+
+    for (int i = 0; i < passwordList.size(); i++) {
+
+        string encryptedPassword="";
+
+        for (int j=0; j<passwordList[i].size(); j++) {
+          
+            char encryptedChar= ((passwordList[i].at(j)-'a')+ (cipherKey.at(j)-'a')) %26 + 'a';
+            encryptedPassword+= encryptedChar;
+
+        }
+        cout<<passwordList[i]<<" Versus Encrypted " <<encryptedPassword<<endl;
+        encryptedPasswordList.push_back(encryptedPassword);
+        
+    }
+    cout<<passwordList.at(0)<<endl;
+    outFile.close();
+    return 0;
