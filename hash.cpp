@@ -38,10 +38,10 @@ int HashTable:: hashFunction(const string& key) {
 //insert function that creates a new node with userid, password, and encrypted password
 //uses hash function to find index and then adds to the linked list stored at that index
 
-void HashTable:: insert(const string& name, const string& pword, const string& encPword) {
+void HashTable:: insert(const string& name, const string& password, const string& encPassword) {
 
     int index = hashFunction(name);
-    node* newNode = new node{name, pword, encPword, nullptr};
+    node* newNode = new node{name, password, encPassword, nullptr};
 
 
     if (table[index] == nullptr) {

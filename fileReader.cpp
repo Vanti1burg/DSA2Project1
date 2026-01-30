@@ -149,6 +149,9 @@ HashTable FileReader:: getUserTable() {
 //This is the tester function that reads from rawPasswords.txt and compares to the data stored in the hashtable after a decryption process
 void FileReader:: Tester(string testFileName){
 
+    cout << "Starting Tester Function" <<endl;
+
+
     ifstream testfile;
     testfile.open(testFileName);
 
@@ -186,24 +189,24 @@ void FileReader:: Tester(string testFileName){
 
         cout<<"Testing user: " << testName << endl;
         cout<<"Test password: " << passWord << endl;
-        cout<< hashName << endl;
-        cout<< hashPassword << endl;
-        
+       
 
         if (hashName== testName && hashPassword == passWord) {
 
-            cout<<"Test Passed for user: " << testName <<endl;
+            cout<<"Test Passed for user: " << testName <<" File Password : "<< passWord<<  " Decrypted Hash Password : " << hashPassword<<endl;
+            cout<<endl;
 
         }
 
         else {
 
-            cout<<"Test Failed for user: " << testName <<endl;
+            cout<<"Test Failed for user: " <<  testName << " File Password : "<< passWord<<  " Decrypted Hash Password : " << hashPassword <<endl;
+            cout<<endl;
         }
 
     }
     }
-    userTable.getNodeContents("SMITH");
+    
 }
 
 
@@ -215,7 +218,7 @@ void FileReader:: Tester(string testFileName){
 
 void FileReader::FailTester(string testFileName){
 
-
+cout<<"Starting Fail Tester FunctionS"<<endl;
 ifstream testfile;
 
     testfile.open(testFileName);
@@ -253,20 +256,20 @@ ifstream testfile;
         cout<<"Testing user: " << testName << endl;
         cout<<"Test password: " << passWord << endl;
 
-        cout<< hashName << endl;
-        cout<< hashPassword << endl;
-
+     
         hashPassword.at(3)='z'; //intentionally fail the test by changing one character
 
         if (hashName== testName && hashPassword == passWord) {
 
-            cout<<"Test Passed for user: " << testName <<endl;
+            cout<<"Test Passed for user: " << testName <<" File Password : "<< passWord<<  " Decrypted Hash Password : " << hashPassword<< endl;
+            cout<<endl;
 
         }
 
         else {
 
-            cout<<"Test Failed for user: " << testName <<endl;
+            cout<<"Test Failed for user: " << testName <<" File Password : "<< passWord<<  " Decrypted Hash Password : " << hashPassword<< endl;
+            cout<<endl;
 
         }
 
