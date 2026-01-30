@@ -1,3 +1,19 @@
+
+/***************************************************************
+  Student Name:Trenton Peterson
+  Assignment number DSA 2 Project 1
+
+  Main.cpp, driver for the program
+***************************************************************/
+
+
+
+
+
+
+
+
+
 #include <iostream>
 #include <fstream>
 #include <ostream>

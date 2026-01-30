@@ -1,3 +1,14 @@
+/***************************************************************
+  Student Name:Trenton Peterson
+  File Name: FileReader.hpp
+  Assignment number DSA 2 Project 1
+
+  Header File for FileReader Class where all declarations are stored 
+***************************************************************/
+
+
+
+
 #ifndef FILEREADER_HPP
 #define FILEREADER_HPP
 #include <iostream>

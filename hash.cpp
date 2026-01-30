@@ -1,3 +1,20 @@
+/***************************************************************
+  Student Name:Trenton Peterson
+  File Name: hash.cpp
+  Assignment number Project 1 DSA 2
+
+  This is the definition file for the HashTable class where methods are defined
+***************************************************************/
+
+
+
+
+
+
+
+
+
+
 #include <iostream>
 #include <fstream>
 #include <string>

@@ -1,3 +1,20 @@
+
+/***************************************************************
+  Student Name:Trenton Peterson
+  File Name: fileReader.cpp
+  Assignment number DSA 2 Project 1
+  This is the definition file for the filereader class where the methods are defined
+***************************************************************/
+
+
+
+
+
+
+
+
+
+
 #include <iostream>
 #include <fstream>
 #include <string>

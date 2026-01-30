@@ -1,3 +1,19 @@
+
+/***************************************************************
+  Student Name:Trenton Peterson
+  File Name:hash.hpp
+  Assignment number Project 1 Dsa2
+  This is the header file for the hashtable class where all declarations pertaining to the class are made
+  Other comments regarding the file - description of why it is there, etc.
+***************************************************************/
+
+
+
+
+
+
+
+
 #ifndef HASH_HPP
 #define HASH_HPP
 #include <iostream>
